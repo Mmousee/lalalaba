@@ -13,10 +13,15 @@ def main():
     ice(800,280)
     ice(1450,430)
 def fon():
+    
+    """Рисует фон. Аргументов не принимает, ни от чего не зависит. Хорошая функция."""
+    
     rect(screen, '#afdafc', (0, 0, 1600, 400))
     rect(screen, '#30ba8f', (0, 400, 1600, 800))
 def Ovalniy_man(x,y, side):
+    
     """Рисует овального человека по заданным координатам. Если переменная side == False, отразит его по вертикали. """
+    
     ellipse(screen, '#baacc7', (x, y, 140, 350))
     circle(screen, '#dcdcdc', (x + 70, y - 50), 70)
     if side == True:
@@ -35,7 +40,9 @@ def Ovalniy_man(x,y, side):
     circle(screen, '#dcdcdc', (1340, 200), 70)
     
 def Triugolniy_man(x,side):
+    
     """Рисует треугольного человека по заданным координатам. Если переменная side == False, отразит его по вертикали. """
+    
     k1 = 90 #подгоночный коэффициент 1
     k2 = 25 #подгоночный коэффициент 2
     
@@ -58,20 +65,25 @@ def Triugolniy_man(x,side):
     line(screen, 'black', (x+k2, 730), (x+k1, 730))
 
 def heart():
+    
+     """Рисует сердце на верёвочке"""
+    
     line(screen, 'black', (80, 460), (80, 200))
     polygon(screen, 'red', [(80, 250), (40, 150), (120, 145)])
     circle(screen, 'red', (60, 145), 25)
     circle(screen, 'red', (100, 145), 25)
-    """Рисует сердце на верёвочке"""
+   
     
 def ice(x1,y1):
+    
+      """рисует мороженое. На верёвочке. Принимает на вход его координаты"""
+    
     line(screen, 'black', (x1, y1), (x1, y1 - 100))
     polygon(screen, 'yellow', [(x1, y1 - 90), (x1 - 50, y1 - 190), (x1 + 50, y1 - 190)])
     circle(screen, 'red', (x1 + 25, y1 - 200), 25)
     circle(screen, 'brown', (x1 - 25, y1 - 200), 25)
     circle(screen, 'white', (x1, y1 - 240), 25)
-    """рисует мороженое. На верёвочке.
-    принимает на вход его координаты""" 
+   
     
 main()
 
