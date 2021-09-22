@@ -30,6 +30,7 @@ def kust(x1, y1, size):
         ellipse (screen, (255,255,255), (x1-size*1+size*i*a,y1+size*21/10+size*i*b, size*5,size*3))
         ellipse (screen, (1,1,1), (x1-size*1+size*i*a,y1+size*21/10+size*i*b, size*5,size*3),1)
 
+        
 def koza (x,y,size):
     ellipse(screen, (255,255,255), (x,y,size*22,size*10))
     ellipse(screen, (255,255,255), (x+size*18, y-size*13, size*6, size*16))
