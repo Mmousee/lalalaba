@@ -13,6 +13,7 @@ def main1():
     main()
     animation()
     animation_end()
+    
 def main():
     """
     Вызывает фунцию рисования картинки
