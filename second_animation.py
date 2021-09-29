@@ -13,9 +13,11 @@ def main1():
     main()
     animation()
     animation_end()
+    """рисует анимацию"""
     
 def main():
     """
+    рисует небо,
     Вызывает фунцию рисования картинки
     :return:
     """
@@ -150,6 +152,8 @@ def koza(x, y, size):
 
 
 def cloud (x,y):
+    
+    """рисует облако с центром в х, у"""
     circle (screen, (255,255,255), (x,y-1), 30)
     circle (screen, (255,255,255), (x-26,y+1), 30)
     circle (screen, (255,255,255), (x+22,y+5), 30)
@@ -163,6 +167,8 @@ def koza_prishla():
         clock.tick(100)
         main()
         kust(500,600,4)
+      
+    """рисует анимацию идущей козы, а на фоне плывёт облако"""
         
 def koza_prigayet():
     for i in range(-100, 700):
@@ -177,6 +183,7 @@ def koza_prigayet():
         kust(500,600,4)
         cloud((0+i)*2%700,100)
         cloud(0+i,170)
+         """рисует анимацию прыгающей козы, а на фоне плывут два облака"""
 
 def new_kust(x,y):
     for i in range (300):
@@ -184,11 +191,13 @@ def new_kust(x,y):
         kust(x,y, i/100)
         pygame.display.update()
         clock.tick(100)
+         """функция "растит" куст с центром в точке х,у"""
 def animation():
     new_kust(500,600)
     clock.tick(100)
     koza_prishla()
     koza_prigayet()
+     """анимация"""
 
 def animation_end(): 
     s = screen
@@ -203,6 +212,7 @@ def animation_end():
         screen.blit(pygame.transform.rotate(s, 1), (0, 0))
         pygame.display.update()
         clock.tick(100)
+        """треш четвёртой стены"""
     
 main1()
 pygame.display.update()
